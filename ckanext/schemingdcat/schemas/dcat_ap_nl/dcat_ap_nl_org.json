@@ -1,0 +1,276 @@
+{
+    "scheming_version": 2,
+    "organization_type": "organization",
+    "about": "Organizations: Adaptation for CKAN of the GeoDCAT-AP metadata schema extended (2.0.0) with ISO-19115 (INSPIRE) mandatory elements.",
+    "about_url": "https://github.com/mjanez/ckanext-schemingdcat",
+    "fields": [
+      {
+        "field_name": "title",
+                "label": {
+                    "en": "Name",
+                    "nl": "Naam"
+                },
+        "validators": "ignore_missing unicode_safe",
+        "form_snippet": "large_text.html",
+        "form_attrs": {"data-module": "slug-preview-target"},
+                "form_placeholder": {
+                    "en": "My organization",
+                    "nl": "Mijn organisatie"
+                }
+      },
+      {
+        "field_name": "name",
+        "label": "URL",
+        "validators": "not_empty unicode_safe name_validator group_name_validator",
+        "form_snippet": "slug.html",
+        "display_snippet": "link.html",
+        "form_placeholder": "my-organization"
+      },
+      {
+        "field_name": "description",
+                "label": {
+                    "en": "Abstract",
+                    "nl": "Samenvatting"
+                },
+        "form_snippet": "markdown.html",
+        "display_snippet": "markdown.html",
+                "form_placeholder": {
+                    "en": "e.g. Some useful description about the group.",
+                    "nl": "bijv. Een nuttige beschrijving van de groep."
+                }
+      },
+      {
+        "field_name": "image_url",
+                "label": {
+                    "en": "Image URL",
+                    "nl": "Afbeeldings-URL"
+                },
+        "display_snippet": "link.html",
+        "preset": "resource_url_upload",
+        "form_placeholder": "http://example.com/my-image.jpg"
+      },
+      {
+        "field_name": "publisher_email",
+                "label": {
+                    "en": "Email of the publisher",
+                    "nl": "E-mail van de uitgever"
+                },
+        "display_snippet": "email.html",
+        "form_placeholder": "joseblanco@example.com"
+      },
+      {
+        "field_name": "publisher_url",
+                "label": {
+                    "en": "Website of the publisher",
+                    "nl": "Website van de uitgever"
+                },
+        "display_snippet": "link.html",
+        "form_placeholder": "e.g. http://www.example.org.com/"
+      },
+      {
+        "field_name": "identifier",
+                "label": {
+                    "en": "URI of the publisher",
+                    "nl": "URI van de uitgever"
+                },
+        "display_snippet": "link.html",
+        "form_placeholder": "e.g. E05068001",
+        "help_text": {
+          "en": "Unique identifier of the organisation, for example DIR3 for Spain (<a href='https://datos.gob.es/es/recurso/sector-publico/org/Organismo' target='_blank'>datos.gob.es</a>).",
+          "nl": "Unieke identificatie van de organisatie, bijvoorbeeld een TOOI URL."
+        },
+        "help_allow_html": "True"
+      },
+      {
+        "field_name": "publisher_type",
+        "label": {
+            "en": "Type of the publisher",
+            "nl": "Type uitgever"
+        },
+        "preset": "select",
+        "display_property": "dct:type",
+        "display_snippet": "schemingdcat/display_snippets/link_schema.html",
+        "choices": [
+            {
+                "label": {
+                    "en": "National authority",
+                    "nl": "Nationale autoriteit"
+                },
+                "value": "http://purl.org/adms/publishertype/NationalAuthority"
+            },
+            {
+                "label": {
+                    "en": "Regional authority",
+                    "nl": "Regionale autoriteit"
+                },
+                "value": "http://purl.org/adms/publishertype/RegionalAuthority"
+            },
+            {
+                "label": {
+                    "en": "Supranational authority",
+                    "nl": "Supranationale autoriteit"
+                },
+                "value": "http://purl.org/adms/publishertype/SupraNationalAuthority"
+            },
+            {
+                "label": {
+                    "en": "Local authority",
+                    "nl": "Lokale autoriteit"
+                },
+                "value": "http://purl.org/adms/publishertype/LocalAuthority"
+            },
+            {
+                "label": {
+                    "en": "Academia-Scientific organisation",
+                    "nl": "Academische wetenschappelijke organisatie"
+                },
+                "value": "http://purl.org/adms/publishertype/Academia-ScientificOrganisation"
+            },
+            {
+                "label": {
+                    "en": "Non profit organisation",
+                    "nl": "Non-profitorganisatie"
+                },
+                "value": "http://purl.org/adms/publishertype/NonProfitOrganisation"
+            },
+            {
+                "label": {
+                    "en": "Company",
+                    "nl": "Bedrijf"
+                },
+                "value": "http://purl.org/adms/publishertype/Company"
+            },
+            {
+                "label": {
+                    "en": "Industry consortium",
+                    "nl": "Industrieel consortium"
+                },
+                "value": "http://purl.org/adms/publishertype/IndustryConsortium"
+            },
+            {
+                "label": {
+                    "en": "Non Governmental Organisation",
+                    "nl": "Niet-gouvernementele organisatie (NGO)"
+                },
+                "value": "http://purl.org/adms/publishertype/NonGovernmentalOrganisation"
+            },
+            {
+                "label": {
+                    "en": "Private individual(s)",
+                    "nl": "Particuliere personen"
+                },
+                "value": "http://purl.org/adms/publishertype/PrivateIndividual(s)"
+            },
+            {
+                "label": {
+                    "en": "Standardisation body",
+                    "nl": "Normalisatieorgaan"
+                },
+                "value": "http://purl.org/adms/publishertype/StandardisationBody"
+            }
+        ]
+      },
+      {
+        "field_name": "theme_eu",
+        "label": {
+            "en": "Themes (DCAT-AP)",
+            "nl": "Thema's (DCAT-AP)"
+        },
+        "preset": "multiple_choice_icon",
+        "display_property": "dcat:theme",
+        "select_size": 10,
+        "help_text": {
+            "en": "<a href=\"http://publications.europa.eu/resource/authority/data-theme\" target=\"_blank\" rel=\"noopener\">Themes</a> (DCAT-AP)",
+            "nl": "<a href=\"http://publications.europa.eu/resource/authority/data-theme\" target=\"_blank\" rel=\"noopener\">Thema's</a> (DCAT-AP)"
+        },
+        "help_allow_html": "True",
+        "sorted_choices": "True",
+        "choices": [
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/AGRI",
+                    "label": {
+                    "en": "Agriculture, fisheries, forestry and food",
+                    "nl": "Landbouw, visserij, bosbouw en voeding"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/ECON",
+                    "label": {
+                    "en": "Economy and finance",
+                    "nl": "Economie en financiën"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/EDUC",
+                    "label": {
+                    "en": "Education, culture and sport",
+                    "nl": "Onderwijs, cultuur en sport"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/ENER",
+                    "label": {
+                    "en": "Energy",
+                    "nl": "Energie"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/ENVI",
+                    "label": {
+                    "en": "Environment",
+                    "nl": "Milieu"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/GOVE",
+                    "label": {
+                    "en": "Government and public sector",
+                    "nl": "Overheid en publieke sector"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/HEAL",
+                    "label": {
+                    "en": "Health",
+                    "nl": "Gezondheid"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/INTR",
+                    "label": {
+                    "en": "International issues",
+                    "nl": "Internationale aangelegenheden"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/JUST",
+                    "label": {
+                    "en": "Justice, legal system and public safety",
+                    "nl": "Justitie, rechtsstelsel en openbare veiligheid"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/REGI",
+                    "label": {
+                    "en": "Regions and cities",
+                    "nl": "Regio's en steden"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/SOCI",
+                    "label": {
+                    "en": "Population and society",
+                    "nl": "Bevolking en samenleving"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/TECH",
+                    "label": {
+                    "en": "Science and technology",
+                    "nl": "Wetenschap en technologie"
+                }
+            }
+        ]
+      }
+    ]
+  }

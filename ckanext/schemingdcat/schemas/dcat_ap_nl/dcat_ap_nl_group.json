@@ -1,0 +1,169 @@
+{
+    "scheming_version": 1,
+    "group_type": "group",
+    "about": "Organizations: Adaptation for CKAN of the GeoDCAT-AP metadata schema extended (2.0.0) with ISO-19115 (INSPIRE) mandatory elements.",
+    "about_url": "https://github.com/mjanez/ckanext-schemingdcat",
+    "fields": [
+      {
+        "field_name": "title",
+        "label": {
+          "en": "Name",
+          "nl": "Naam"
+        },
+        "validators": "ignore_missing unicode_safe",
+        "form_snippet": "large_text.html",
+        "form_attrs": {"data-module": "slug-preview-target"},
+        "form_placeholder": {
+          "en": "My group",
+          "nl": "Mijn groep"
+        }
+      },
+      {
+        "field_name": "name",
+        "label": "URL",
+        "validators": "not_empty unicode_safe name_validator group_name_validator",
+        "form_snippet": "slug.html",
+        "display_snippet": "link.html",
+        "form_placeholder": "my-group"
+      },
+      {
+        "field_name": "description",
+        "label": {
+          "en": "Abstract",
+          "nl": "Samenvatting"
+        },
+        "form_snippet": "markdown.html",
+        "display_snippet": "markdown.html",
+        "form_placeholder": {
+          "en": "e.g. Some useful description about the organization.",
+          "nl": "bijv. Een nuttige beschrijving van de organisatie."
+        }
+      },
+      {
+        "field_name": "image_url",
+        "label": {
+          "en": "Image URL",
+          "nl": "Afbeeldings-URL"
+        },
+        "display_snippet": "link.html",
+        "preset": "resource_url_upload",
+        "form_placeholder": "http://example.com/my-image.jpg"
+      },
+      {
+        "field_name": "identifier",
+        "label": {
+          "en": "URI identifier",
+          "nl": "URI-identificatie"
+        },
+        "display_snippet": "link.html",
+        "form_placeholder": "https://www.eionet.europa.eu/gemet/en/concept/5033",
+        "help_text": {
+          "en": "Unique identifier of the collection in a thesaurus or controlled vocabulary, e.g. (<a href='https://www.eionet.europa.eu/gemet/en/concept/5033' target='_blank'>GEMET - marine environment</a>)",
+          "nl": "Unieke identificatie van de collectie in een thesaurus of gecontroleerd vocabulaire, bijv.: (<a href='https://www.eionet.europa.eu/gemet/en/concept/5033' target='_blank'>GEMET - marine environment</a>)"
+        },
+        "help_allow_html": "True"
+      },
+      {
+        "field_name": "theme_eu",
+        "label": {
+          "en": "Themes (DCAT-AP)",
+          "nl": "Thema's (DCAT-AP)"
+        },
+        "preset": "multiple_choice_icon",
+        "display_property": "dcat:theme",
+        "select_size": 10,
+        "help_text": {
+            "en": "<a href=\"http://publications.europa.eu/resource/authority/data-theme\" target=\"_blank\" rel=\"noopener\">Themes</a> (DCAT-AP)",
+            "nl": "<a href=\"http://publications.europa.eu/resource/authority/data-theme\" target=\"_blank\" rel=\"noopener\">Thema's</a> (DCAT-AP)"
+        },
+        "help_allow_html": "True",
+        "sorted_choices": "True",
+        "choices": [
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/AGRI",
+                "label": {
+                    "en": "Agriculture, fisheries, forestry and food",
+                    "nl": "Landbouw, visserij, bosbouw en voeding"
+                }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/ECON",
+                  "label": {
+                    "en": "Economy and finance",
+                    "nl": "Economie en financiën"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/EDUC",
+                  "label": {
+                    "en": "Education, culture and sport",
+                    "nl": "Onderwijs, cultuur en sport"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/ENER",
+                  "label": {
+                    "en": "Energy",
+                    "nl": "Energie"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/ENVI",
+                  "label": {
+                    "en": "Environment",
+                    "nl": "Milieu"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/GOVE",
+                  "label": {
+                    "en": "Government and public sector",
+                    "nl": "Overheid en publieke sector"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/HEAL",
+                  "label": {
+                    "en": "Health",
+                    "nl": "Gezondheid"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/INTR",
+                  "label": {
+                    "en": "International issues",
+                    "nl": "Internationale aangelegenheden"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/JUST",
+                  "label": {
+                    "en": "Justice, legal system and public safety",
+                    "nl": "Justitie, rechtsstelsel en openbare veiligheid"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/REGI",
+                  "label": {
+                    "en": "Regions and cities",
+                    "nl": "Regio's en steden"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/SOCI",
+                  "label": {
+                    "en": "Population and society",
+                    "nl": "Bevolking en samenleving"
+                  }
+            },
+            {
+                "value": "http://publications.europa.eu/resource/authority/data-theme/TECH",
+                  "label": {
+                    "en": "Science and technology",
+                    "nl": "Wetenschap en technologie"
+                  }
+            }
+        ]
+      }
+    ]
+  }
