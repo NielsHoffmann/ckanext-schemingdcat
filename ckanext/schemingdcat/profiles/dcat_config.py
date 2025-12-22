@@ -236,6 +236,15 @@ eu_geodcat_ap_default_values = {
     'spatial_uri': 'http://publications.europa.eu/resource/authority/country/ESP',
 }
 
+# NL DCAT-AP: Mandatory catalog elements by DCAT-AP-NL.
+nl_dcat_ap_default_values = {
+    'language': 'http://publications.europa.eu/resource/authority/language/NLD',
+    'catalog_languages': ['http://publications.europa.eu/resource/authority/language/NLD', 'http://publications.europa.eu/resource/authority/language/ENG'],
+    'spatial_uri': 'http://publications.europa.eu/resource/authority/country/NLD',
+    'theme_taxonomy': 'http://standaarden.overheid.nl/owms/4.0/informatietype', # Example NL taxonomy
+    # ... other defaults similar to eu_dcat_ap_default_values
+}
+
 # Default field_names to translated fields mapping (ckanext.schemingdcat:schemas)
 default_translated_fields = {
     'title': 

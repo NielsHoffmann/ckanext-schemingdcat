@@ -55,6 +55,9 @@ setup(
         es_dcat=ckanext.schemingdcat.profiles:EsNTIRISPProfile
         es_dcat_ap_2=ckanext.schemingdcat.profiles:EsDCATAP2Profile  
 
+        # NL | Dutch DCAT-AP profile
+        dcat_ap_nl=ckanext.schemingdcat.profiles:NLD_DCATAPProfile
+
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
     ''',

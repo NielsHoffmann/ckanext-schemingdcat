@@ -13,6 +13,7 @@ from .dcat_ap.es_dcat_ap_2 import EsDCATAP2Profile
 from .geodcat_ap.eu_geodcat_ap_2 import EuGeoDCATAP2Profile
 from .geodcat_ap.eu_geodcat_ap_3 import EuGeoDCATAP3Profile
 
+from .dcat_ap.nl_dcat_ap import NLD_DCATAPProfile
 
 __all__ = [
     # Custom compatibilty profile meant to add support for ckanext-scheming 
