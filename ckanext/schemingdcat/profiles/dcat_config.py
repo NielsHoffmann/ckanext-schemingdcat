@@ -19,6 +19,7 @@ Default values can be overridden in resource-specific metadata.
         A dictionary containing the default translated fields for the ckanext-schemingdcat extension.
 """
 from pathlib import Path
+from datetime import datetime
 
 from ckanext.dcat.profiles.base import (
     RDF,
@@ -198,6 +199,8 @@ eu_dcat_ap_default_values = {
     'rights_uri_label': 'Rights related to the re-use of the Open Data Catalogue',
     'rights_attribution_text': 'Attribution of authorship to the organisation.',
     'spatial_uri': 'http://publications.europa.eu/resource/authority/country/ESP',
+    'metadata_modified': datetime.now().isoformat(),
+    'metadata_created': datetime.now().isoformat(),
 }
 
 # EU GeoDCAT-AP Profile: Mandatory catalog elements by GeoDCAT-AP.
