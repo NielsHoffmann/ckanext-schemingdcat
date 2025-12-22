@@ -2,7 +2,7 @@ scheming_version: 2
 dataset_type: dataset
 about: "Datasets/Distributions: Adaptation for CKAN of the DCAT-AP vocabulary (https://semiceu.github.io/DCAT-AP/releases/2.1.1). European context (EU27)" 
 about_url: https://github.com/mjanez/ckanext-schemingdcat
-form_languages: ["en", "es"]
+form_languages: ["en", "es", "nl"]
 required_language: "en"
 schema_version: 3.1
 schema_date: 2024-12-04
@@ -17,6 +17,7 @@ schema_form_groups:
     label:
       en: Title
       es: Título
+      nl: Titel
     fa_icon: fa-sticky-note
   - form_group_id: general_info
     label:
@@ -32,6 +33,7 @@ schema_form_groups:
     label:
       en: Abstract
       es: Resumen
+      nl: Samenvatting
     fa_icon: fa-file-text
   - form_group_id: vocabs
     label:
@@ -102,11 +104,13 @@ schema_form_groups:
     label:
       en: Title
       es: Título
+      nl: Titel
     fa_icon: fa-sticky-note
   - form_group_id: resource_notes
     label:
       en: Abstract
       es: Resumen
+      nl: Samenvatting
     fa_icon: fa-file-text
   - form_group_id: resource_identification
     label:
@@ -159,6 +163,7 @@ schema_form_tabs:
     label:
       en: Identification
       es: Identificación
+      nl: Identificatie
     form_group_id:
       - title
       - general_info
@@ -169,6 +174,7 @@ schema_form_tabs:
     label:
       en: Vocabs
       es: Vocabularios
+      nl: Vocabularia
     form_group_id:
       - vocabs
   - form_tab: contact_tab
@@ -176,6 +182,7 @@ schema_form_tabs:
     label:
       en: Contact point
       es: Punto de contacto
+      nl: Contactpunt
     form_group_id:
       - contact
   - form_tab: publisher_tab
@@ -183,6 +190,7 @@ schema_form_tabs:
     label:
       en: Publisher
       es: Publicador
+      nl: Uitgever
     form_group_id:
       - publisher
   - form_tab: responsible_parties_tab
@@ -190,6 +198,7 @@ schema_form_tabs:
     label:
       en: Responsible parties
       es: Responsables
+      nl: Verantwoordelijken
     form_group_id:
       - maintainer
       - author
@@ -198,6 +207,7 @@ schema_form_tabs:
     label:
       en: Quality
       es: Calidad
+      nl: Kwaliteit
     form_group_id:
       - standards
       - temporal_info
@@ -206,6 +216,7 @@ schema_form_tabs:
     label:
       en: Lineage
       es: Linaje
+      nl: Herkomst
     form_group_id:
       - lineage
       - purpose
@@ -214,6 +225,7 @@ schema_form_tabs:
     label:
       en: Spatial
       es: Espacial
+      nl: Ruimtelijk
     form_group_id:
       - spatial_info
   - form_tab: license_tab
@@ -221,6 +233,7 @@ schema_form_tabs:
     label:
       en: License
       es: Licencia
+      nl: Licentie
     form_group_id:
       - license_info
       - version_notes
@@ -230,6 +243,7 @@ schema_form_tabs:
     label:
       en: Identification
       es: Identificación
+      nl: Identificatie
     form_group_id:
       - resource_title
       - resource_url
@@ -240,6 +254,7 @@ schema_form_tabs:
     label:
       en: Distribution
       es: Distribución
+      nl: Distributie
     form_group_id:
       - resource_distribution
       - resource_type
@@ -249,6 +264,7 @@ schema_form_tabs:
     label:
       en: Lineage
       es: Linaje
+      nl: Herkomst
     form_group_id:
       - resource_lineage
       - resource_relations
@@ -257,6 +273,7 @@ schema_form_tabs:
     label:
       en: Quality
       es: Calidad
+      nl: Kwaliteit
     form_group_id:
       - resource_standards
   - form_tab: resource_license_tab
@@ -264,6 +281,7 @@ schema_form_tabs:
     label:
       en: License
       es: Licencia
+      nl: Licentie
     form_group_id:
       - resource_license_info
 
@@ -287,7 +305,7 @@ dataset_fields:
   form_placeholder:
     en: e.g. A descriptive title.
     es: ej. Un título descriptivo.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   required_language: "en"
   form_group_id: title
 
@@ -1215,13 +1233,14 @@ dataset_fields:
   label: 
     en: Dataset abstract 
     es: Resumen del conjunto de datos
+    nl: Samenvatting van de dataset
   preset: schemingdcat_fluent_notes_translated
   required: True
   display_property: dct:description
   form_placeholder:
     en: e.g. Some useful description about the dataset.
     es: ej. Una descripción útil sobre el conjunto de datos.
-  form_languages: ["es", "en"]
+  form_languages: ["es", "en", "nl"]
   required_language: "es"
   default_values: 
     en: Default abstract of the {dataset}.
@@ -1232,12 +1251,14 @@ dataset_fields:
   label: 
     en: Keywords
     es: Palabras clave
+    nl: Trefwoorden
   preset: tag_string_autocomplete
   display_property: dct:subject
   form_placeholder: 'payments'
   help_text:
     en: 'A keyword or tag describing the resource.'
     es: 'Palabra clave o etiqueta que describe el recurso.'
+    nl: 'Een trefwoord of tag die de bron beschrijft.'
   form_group_id: vocabs
 
 # Keyword URI (M)
@@ -1248,12 +1269,14 @@ dataset_fields:
   label: 
     en: Keyword URIs
     es: URI de palabras clave
+    nl: Trefwoord-URI's
   preset: multiple_text
   display_snippet: schemingdcat/display_snippets/list_keywords.html
   form_placeholder: 'http://inspire.ec.europa.eu/metadata-codelist/IACSData/gsaa'
   help_text:
     en: 'e.g. Metadata code list register (INSPIRE): http://inspire.ec.europa.eu/metadata-codelist'
     es: 'ej: Registro de listas controladas de metadatos (INSPIRE): http://inspire.ec.europa.eu/metadata-codelist'
+    nl: 'bijv. Metadata codelijst register (INSPIRE): http://inspire.ec.europa.eu/metadata-codelist'
   form_group_id: vocabs
 
 # TODO: Probably better include contact_role and contact_organization (boolean) to distinguish between vcard:Individual and vcard:Organizationto use in ckanext-dcat/profiles.py
@@ -1331,51 +1354,62 @@ dataset_fields:
     - label:
         en: Resource Provider
         es: Proveedor de recursos
+        nl: Bronhouder
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider
       geodcatap: geodcatap:resourceProvider
     - label:
         en: Custodian
         es: Custodio
+        nl: Beheerder
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian
       geodcatap: geodcatap:custodian
     - label:
         en: Owner
         es: Propietario
+        nl: Eigenaar
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner
       geodcatap: dct:rightsHolder
     - label:
         en: User
         es: Usuario
+        nl: Gebruiker
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user
       geodcatap: geodcatap:user
     - label:
         en: Distributor
         es: Distribuidor
+        nl: Distributeur
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor
       geodcatap: geodcatap:distributor
     - label:
         en: Originator
         es: Originador
+        nl: Bronhouder
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator
       geodcatap: geodcatap:originator
     - label:
         en: Point of Contact
         es: Punto de contacto
+        nl: Contactpunt
+      nl: Contactpunt
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact
       geodcatap: dcat:contactPoint
     - label:
         en: Principal Investigator
         es: Investigador principal
+        nl: Hoofdonderzoeker
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator
       geodcatap: geodcatap:principalInvestigator
     - label:
         en: Processor
         es: Procesador
+        nl: Verwerker
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor
       geodcatap: geodcatap:processor
     - label:
         en: Publisher
         es: Editor
+        nl: Uitgever
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher
       geodcatap: dct:publisher
     - label:
@@ -1901,7 +1935,7 @@ dataset_fields:
   form_placeholder:
     en: Means the history of a data set, and the life cycle from collection and acquisition through compilation and derivation to its current form, in accordance with EN ISO-19101.
     es: Historia de un conjunto de datos y su ciclo de vida desde su recogida y adquisición hasta su compilación y derivación hasta su forma actual, con arreglo a la norma EN ISO-19101.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   form_group_id: lineage
 
 # Conformity (M)
@@ -2177,7 +2211,7 @@ dataset_fields:
   help_text: 
     en: 'Summary of the intentions for which the dataset was developed (ISO 19115).'
     es: 'Resumen de las intenciones para las que se desarrolló el conjunto de datos (ISO 19115).'
-    form_languages: ["en", "es"]
+    form_languages: ["en", "es", "nl"]
   form_group_id: purpose
 
 # Character encoding (C)
@@ -2689,7 +2723,7 @@ dataset_fields:
   form_placeholder:
     en: e.g. Some useful version notes about the dataset.
     es: ej. Una descripción útil sobre las diferencias de esta versión del conjunto de datos.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   form_group_id: version_notes
 
 # Dataset validity (O)

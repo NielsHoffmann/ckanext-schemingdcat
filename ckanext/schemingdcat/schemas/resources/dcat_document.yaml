@@ -2,7 +2,7 @@ scheming_version: 2
 dataset_type: document
 about: "Datasets/Distributions: Adaptation for CKAN of the Data Catalog Vocabulary (DCAT) - Version 3 (https://www.w3.org/TR/vocab-dcat-3/)." 
 about_url: https://github.com/mjanez/ckanext-schemingdcat
-form_languages: ["en", "es"]
+form_languages: ["en", "es", "nl"]
 required_language: "en"
 schema_version: 3.0
 schema_date: 2024-08-01
@@ -17,131 +17,159 @@ schema_form_groups:
     label:
       en: Title
       es: Título
+      nl: Titel
     fa_icon: fa-sticky-note
   - form_group_id: general_info
     label:
       en: General information
       es: Información general
+      nl: Algemene informatie
     fa_icon: fa-info-circle 
   - form_group_id: identification
     label:
       en: Dataset identification
       es: Identificación del conjunto de datos
+      nl: Identificatie van de dataset
     fa_icon: fa-id-card
   - form_group_id: notes
     label:
       en: Abstract
       es: Resumen
+      nl: Samenvatting
     fa_icon: fa-file-text
   - form_group_id: vocabs
     label:
       en: Vocabs information
       es: Información de vocabularios
+      nl: Informatie over vocabularia
     fa_icon: fa-database
   - form_group_id: contact
     label:
       en: Contact information
       es: Información de contacto
+      nl: Contactinformatie
     fa_icon: fa-address-book
   # Responsible parties form_page (#2)
   - form_group_id: publisher
     label:
       en: Publisher information
       es: Información del publicador
+      nl: Uitgeverinformatie
+      nl: Uitgeverinformatie
     fa_icon: fa-user
   - form_group_id: maintainer
     label:
       en: Maintainer information
       es: Información del mantenedor
+      nl: Beheerdersinformatie
+      nl: Beheerdersinformatie
     fa_icon: fa-server
   - form_group_id: author
     label:
       en: Author information
       es: Información del autor
+      nl: Auteursinformatie
+      nl: Auteursinformatie
     fa_icon: fa-pencil-square
   # Quality form_page (#3)
   - form_group_id: standards
     label:
       en: Standards compliance
       es: Adecuación a estándares
+      nl: Naleving van normen
     fa_icon: fa-check-square
   - form_group_id: temporal_info
     label:
       en: Timing
       es: Información temporal
+      nl: Tijdsinformatie
     fa_icon: fa-clock  
   - form_group_id: lineage
     label:
       en: Provenance information
       es: Información de procedencia
+      nl: Herkomstinformatie
     fa_icon: fa-history
   - form_group_id: purpose
     label:
       en: Purpose of the dataset
       es: Propósito del conjunto de datos
+      nl: Doel van de dataset
     fa_icon: fa-question-circle
   # Spatial form_page (#4)
   - form_group_id: spatial_info
     label:
       en: Location information
       es: Información sobre localización
+      nl: Locatie-informatie
     fa_icon: fa-map-marker
   - form_group_id: inspire
     label:
       en: INSPIRE information
       es: Información INSPIRE
+      nl: INSPIRE-informatie
     fa_icon: fa-globe
   # License form_page (#5)
   - form_group_id: license_info
     label:
       en: License and restrictions
       es: Licencia y restricciones
+      nl: Licentie en beperkingen
     fa_icon: fa-lock
   - form_group_id: version_notes
     label:
       en: Version information
       es: Información sobre versiones
+      nl: Versie-informatie
     fa_icon: fa-info-circle
   # Resources form_page
   - form_group_id: resource_title
     label:
       en: Title
       es: Título
+      nl: Titel
     fa_icon: fa-sticky-note
   - form_group_id: resource_notes
     label:
       en: Abstract
       es: Resumen
+      nl: Samenvatting
     fa_icon: fa-file-text
   - form_group_id: resource_identification
     label:
       en: Resource identification
       es: Identificación del recurso
+      nl: Identificatie van de bron
     fa_icon: fa-id-card
   - form_group_id: resource_url
     label:
       en: Resource locator
       es: Localizador del recurso
+      nl: Vindplaats van de bron
     fa_icon: fa-link
   - form_group_id: resource_type
     label:
       en: Resource type information 
       es: Información del tipo de recurso
+      nl: Informatie over het type bron
     fa_icon: fa-file-code 
   - form_group_id: resource_license_info
     label:
       en: License and restrictions
       es: Licencia y restricciones
+      nl: Licentie en beperkingen
     fa_icon: fa-lock
   - form_group_id: resource_lineage
     label:
       en: Provenance information
       es: Información de procedencia
+      nl: Herkomstinformatie
     fa_icon: fa-history
   - form_group_id: resource_standards
     label:
       en: Standards compliance
       es: Adecuación a estándares
+      nl: Naleving van normen
     fa_icon: fa-check-square
 
 ### Codes in Schema
@@ -158,6 +186,7 @@ dataset_fields:
     title: 
       en: Basic Info
       es: Identificación
+      nl: Identificatie
     description: 
       en: Basic metadata identification and reference information.
       es: Información básica de identificación y referencia de los metadatos.
@@ -173,7 +202,7 @@ dataset_fields:
   form_placeholder:
     en: e.g. A descriptive title.
     es: ej. Un título descriptivo.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   required_language: "en"
   form_group_id: title
 
@@ -932,6 +961,7 @@ dataset_fields:
     title: 
       en: Quality
       es: Calidad
+      nl: Kwaliteit
     description: 
       en: Data quality information.
       es: Información sobre calidad de los datos.
@@ -974,6 +1004,7 @@ dataset_fields:
   help_text:
     en: 'An established standard to which the described resource conforms.'
     es: 'Norma establecida a la que se ajusta el recurso descrito.'
+    nl: 'Een vastgestelde standaard waaraan de beschreven bron voldoet.'
   form_group_id: standards
 
 # Metadata standard (M)
@@ -1013,6 +1044,7 @@ dataset_fields:
   label:
     en: Update frequency
     es: Frecuencia de actualización
+    nl: Actualiseringsfrequentie
   preset: select
   display_property: dct:accrualPeriodicity
   display_snippet: schemingdcat/display_snippets/link_schema.html
@@ -1021,14 +1053,17 @@ dataset_fields:
   - label:
       en: Annual
       es: Anual
+      nl: Jaarlijks
     value: http://publications.europa.eu/resource/authority/frequency/ANNUAL
   - label:
       en: Semiannual
       es: Semestral
+      nl: Halfjaarlijks
     value: http://publications.europa.eu/resource/authority/frequency/ANNUAL_2
   - label:
       en: Three times a year
       es: Cuatrimestral
+      nl: Drie keer per jaar
     value: http://publications.europa.eu/resource/authority/frequency/ANNUAL_3
   - label:
       en: Biennial
@@ -1141,12 +1176,14 @@ dataset_fields:
   label: 
     en: Source dataset
     es: Conjunto de datos de origen
+    nl: Bron-dataset
   display_property: dct:source
   display_snippet: schemingdcat/display_snippets/link_name.html
   form_placeholder: http://example.org/catalog/en/dataset/fc21c1a5-4c02-4157-9d2f-9a2cd200f908
   help_text:
     en: This property refers to a related Dataset from which the described Dataset is derived. URI
     es: Esta propiedad hace referencia a un conjunto de datos relacionado del que deriva el conjunto de datos descrito. URI
+    nl: Deze eigenschap verwijst naar een gerelateerde dataset waarvan de beschreven dataset is afgeleid. URI
   form_group_id: lineage
 
 # Related resources (O)
@@ -1154,12 +1191,14 @@ dataset_fields:
   label: 
     en: Related sources
     es: Recurso(s) relacionado(s)
+    nl: Gerelateerde bron(nen)
   preset: multiple_text_links
   display_property: dcat:relation
   form_placeholder: 'http://example.org/catalog/dataset/ejemplo'
   help_text:
     en: 'URI identifying the related resource. You can include as many properties as you know of references.'
     es: 'URI que identifica al recurso relacionado. Se pueden incluir tantas propiedades como referencias se conozcan.'
+    nl: 'URI die de gerelateerde bron identificeert. U kunt zoveel eigenschappen opnemen als u referenties kent.'
 
 # Character encoding (C)
 - field_name: encoding
@@ -1183,20 +1222,24 @@ dataset_fields:
     title: 
       en: Spatial info
       es: Espacial
+      nl: Ruimtelijk
     description: 
       en: Spatial capabilities information.
       es: Información sobre las capacidades espaciales.
+      nl: Informatie over ruimtelijke mogelijkheden.
 
 # Geographic bounding box (M)
 - field_name: spatial
   label: 
     en: Bounding Box
     es: Extensión espacial
+    nl: Ruimtelijk bereik
   preset: spatial
   form_placeholder: '{"type": "Polygon", "coordinates": [[[-18.27, 27.54], [4.44, 27.54], [4.44, 43.85], [-18.27, 43.85], [-18.27, 27.54]]]}'
   help_text:
     en: 'If a <strong>Geographic identifier</strong> is selected and this element is empty, it will be filled in automatically.<a href="https://boundingbox.klokantech.com" target="_blank" rel="noopener">Draw BBox and copy GEOJSON with "coordinates" value..</a> e.g. <code>{"type": "Polygon", "coordinates": [[[-18.27, 27.54], [4.44, 27.54], [4.44, 43.85], [-18.27, 43.85], [-18.27, 27.54]]]}</code><br>Only "geometry" dict with "type" and "coordinates" elements. More information at <a href="http://geojson.org/geojson-spec.html#bounding-boxes" target="_blank" rel="noopener">GeoJSON bounding boxes</a>.'
-    es: 'Sí se selecciona un <strong>Identificador geográfico</strong> y este elemento esta vacío, se rellena automáticamente.<br><br><a href="https://boundingbox.klokantech.com" target="_blank" rel="noopener">Dibuja el BBox y copia el GEOJSON con el valor de "coordinates".</a> ej: <code>{"type": "Polygon", "coordinates": [[[-18.27, 27.54], [4.44, 27.54], [4.44, 43.85], [-18.27, 43.85], [-18.27, 27.54]]]}</code><br>Solo es necesario el diccionario "geometry" con los elementos "type" y "coordinates". Más información en <a href="http://geojson.org/geojson-spec.html#bounding-boxes" target="_blank" rel="noopener">GeoJSON bounding boxes</a>.'
+    es: 'Sí se selecciona un <strong>Identificador geográfico</strong> y este elemento esta vacío, se rellena automáticamente.<br><br><a href="https://boundingbox.klokantech.com" target="_blank" rel="noopener">Dibuja el BBox y copia el GEOJSON con el valor de "coordinates".</a> ej: <code>{"type": "Polygon", "coordinates": [[[-18.27, 27.54], [4.44, 27.54], [4.44, 43.85], [-18.27, 43.85], [-18.27, 27.54]]]}</code><br>Solo es necesario el diccionario "geometry" con los elementos "type" en "coordinates". Más información en <a href="http://geojson.org/geojson-spec.html#bounding-boxes" target="_blank" rel="noopener">GeoJSON bounding boxes</a>.'
+    nl: 'Als er een <strong>Geografische identificatiecode</strong> is geselecteerd en dit element is leeg, wordt dit automatisch ingevuld.<br><br><a href="https://boundingbox.klokantech.com" target="_blank" rel="noopener">Teken de BBox en kopieer de GEOJSON met "coordinates" waarde..</a> bijv. <code>{"type": "Polygon", "coordinates": [[[-18.27, 27.54], [4.44, 27.54], [4.44, 43.85], [-18.27, 43.85], [-18.27, 27.54]]]}</code><br>Alleen "geometry" dict met "type" en "coordinates" elementen. Meer informatie op <a href="http://geojson.org/geojson-spec.html#bounding-boxes" target="_blank" rel="noopener">GeoJSON bounding boxes</a>.'
   help_allow_html: True
   form_group_id: spatial_info
 
@@ -1219,6 +1262,7 @@ dataset_fields:
   label: 
     en: Geographic identifier
     es: Identificador geográfico
+    nl: Geografische identificatiecode
   preset: select_spatial_icon
   display_property: dcat:theme
   select_size: 10
@@ -1473,6 +1517,7 @@ dataset_fields:
     title: 
       en: License info
       es: Licencia
+      nl: Licentie
     description: 
       en: Information on licenses and restrictions on use and access.
       es: Información sobre licencias y restricciones de uso y acceso.

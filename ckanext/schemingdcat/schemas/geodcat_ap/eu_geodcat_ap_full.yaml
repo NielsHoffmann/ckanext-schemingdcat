@@ -17,21 +17,26 @@ schema_form_groups:
     label:
       en: Title
       es: Título
+      nl: Titel
     fa_icon: fa-sticky-note
   - form_group_id: general_info
     label:
       en: General information
       es: Información general
+      nl: Algemene informatie
     fa_icon: fa-info-circle 
   - form_group_id: identification
     label:
       en: Dataset identification
       es: Identificación del conjunto de datos
+      nl: Identificatie van de dataset
+      nl: Identificatie van de dataset
     fa_icon: fa-id-card
   - form_group_id: notes
     label:
       en: Abstract
       es: Resumen
+      nl: Samenvatting
     fa_icon: fa-file-text
   - form_group_id: vocabs
     label:
@@ -96,6 +101,7 @@ schema_form_groups:
     label:
       en: License and restrictions
       es: Licencia y restricciones
+      nl: Licentie en beperkingen
     fa_icon: fa-lock
   - form_group_id: version_notes
     label:
@@ -107,11 +113,13 @@ schema_form_groups:
     label:
       en: Title
       es: Título
+      nl: Titel
     fa_icon: fa-sticky-note
   - form_group_id: resource_notes
     label:
       en: Abstract
       es: Resumen
+      nl: Samenvatting
     fa_icon: fa-file-text
   - form_group_id: resource_identification
     label:
@@ -141,6 +149,7 @@ schema_form_groups:
     label:
       en: License and restrictions
       es: Licencia y restricciones
+      nl: Licentie en beperkingen
     fa_icon: fa-lock
   - form_group_id: resource_lineage
     label:
@@ -164,6 +173,7 @@ schema_form_tabs:
     label:
       en: Identification
       es: Identificación
+      nl: Identificatie
     form_group_id:
       - title
       - general_info
@@ -174,6 +184,7 @@ schema_form_tabs:
     label:
       en: Vocabs
       es: Vocabularios
+      nl: Vocabularia
     form_group_id:
       - vocabs
   - form_tab: contact_tab
@@ -181,6 +192,7 @@ schema_form_tabs:
     label:
       en: Contact point
       es: Punto de contacto
+      nl: Contactpunt
     form_group_id:
       - contact
   - form_tab: publisher_tab
@@ -188,6 +200,7 @@ schema_form_tabs:
     label:
       en: Publisher
       es: Publicador
+      nl: Uitgever
     form_group_id:
       - publisher
   - form_tab: responsible_parties_tab
@@ -195,6 +208,7 @@ schema_form_tabs:
     label:
       en: Responsible parties
       es: Responsables
+      nl: Verantwoordelijken
     form_group_id:
       - maintainer
       - author
@@ -203,6 +217,7 @@ schema_form_tabs:
     label:
       en: Quality
       es: Calidad
+      nl: Kwaliteit
     form_group_id:
       - standards
       - temporal_info
@@ -211,6 +226,7 @@ schema_form_tabs:
     label:
       en: Lineage
       es: Linaje
+      nl: Herkomst
     form_group_id:
       - lineage
       - purpose
@@ -219,6 +235,7 @@ schema_form_tabs:
     label:
       en: Spatial
       es: Espacial
+      nl: Ruimtelijk
     form_group_id:
       - spatial_info
       - inspire
@@ -227,6 +244,7 @@ schema_form_tabs:
     label:
       en: License
       es: Licencia
+      nl: Licentie
     form_group_id:
       - license_info
       - version_notes
@@ -236,6 +254,7 @@ schema_form_tabs:
     label:
       en: Identification
       es: Identificación
+      nl: Identificatie
     form_group_id:
       - resource_title
       - resource_url
@@ -246,6 +265,7 @@ schema_form_tabs:
     label:
       en: Distribution
       es: Distribución
+      nl: Distributie
     form_group_id:
       - resource_distribution
       - resource_type
@@ -255,6 +275,7 @@ schema_form_tabs:
     label:
       en: Lineage
       es: Linaje
+      nl: Herkomst
     form_group_id:
       - resource_lineage
       - resource_relations
@@ -263,6 +284,7 @@ schema_form_tabs:
     label:
       en: Quality
       es: Calidad
+      nl: Kwaliteit
     form_group_id:
       - resource_standards
   - form_tab: resource_license_tab
@@ -270,6 +292,7 @@ schema_form_tabs:
     label:
       en: License
       es: Licencia
+      nl: Licentie
     form_group_id:
       - resource_license_info
 
@@ -293,7 +316,7 @@ dataset_fields:
   form_placeholder:
     en: e.g. A descriptive title.
     es: ej. Un título descriptivo.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   required_language: "en"
   form_group_id: title
 
@@ -601,50 +624,62 @@ dataset_fields:
       label:
         en: Agriculture, fisheries, forestry and food
         es: Agricultura, pesca, silvicultura y alimentación
+        nl: Landbouw, visserij, bosbouw en voeding
     - value: http://publications.europa.eu/resource/authority/data-theme/ECON
       label:
         en: Economy and finance
         es: Economía y finanzas
+        nl: Economie en financiën
     - value: http://publications.europa.eu/resource/authority/data-theme/EDUC
       label:
         en: Education, culture and sport
         es: Educación, cultura y deporte
+        nl: Onderwijs, cultuur en sport
     - value: http://publications.europa.eu/resource/authority/data-theme/ENER
       label:
         en: Energy
         es: Energía
+        nl: Energie
     - value: http://publications.europa.eu/resource/authority/data-theme/ENVI
       label:
         en: Environment
         es: Medio ambiente
+        nl: Milieu
     - value: http://publications.europa.eu/resource/authority/data-theme/GOVE
       label:
         en: Government and public sector
         es: Gobierno y sector público
+        nl: Overheid en publieke sector
     - value: http://publications.europa.eu/resource/authority/data-theme/HEAL
       label:
         en: Health
         es: Salud
+        nl: Gezondheid
     - value: http://publications.europa.eu/resource/authority/data-theme/INTR
       label:
         en: International issues
         es: Asuntos internacionales
+        nl: Internationale zaken
     - value: http://publications.europa.eu/resource/authority/data-theme/JUST
       label:
         en: Justice, legal system and public safety
         es: Justicia, sistema jurídico y seguridad pública
+        nl: Justitie, rechtssysteem en publieke veiligheid
     - value: http://publications.europa.eu/resource/authority/data-theme/REGI
       label:
         en: Regions and cities
         es: Regiones y ciudades
+        nl: Regio's en steden
     - value: http://publications.europa.eu/resource/authority/data-theme/SOCI
       label:
         en: Population and society
         es: Población y sociedad
+        nl: Bevolking en samenleving
     - value: http://publications.europa.eu/resource/authority/data-theme/TECH
       label:
         en: Science and technology
         es: Ciencia y tecnología
+        nl: Wetenschap en technologie
   form_group_id: identification
 
 # High-value dataset category (R)
@@ -1427,6 +1462,7 @@ dataset_fields:
     - label:
         en: Point of Contact
         es: Punto de contacto
+      nl: Contactpunt
       value: http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact
       geodcatap: dcat:contactPoint
     - label:
@@ -1966,7 +2002,7 @@ dataset_fields:
   form_placeholder:
     en: Means the history of a data set, and the life cycle from collection and acquisition through compilation and derivation to its current form, in accordance with EN ISO-19101.
     es: Historia de un conjunto de datos y su ciclo de vida desde su recogida y adquisición hasta su compilación y derivación hasta su forma actual, con arreglo a la norma EN ISO-19101.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   form_group_id: lineage
 
 # Conformity (M)
@@ -2267,7 +2303,7 @@ dataset_fields:
   help_text: 
     en: 'Summary of the intentions for which the dataset was developed (ISO 19115).'
     es: 'Resumen de las intenciones para las que se desarrolló el conjunto de datos (ISO 19115).'
-    form_languages: ["en", "es"]
+    form_languages: ["en", "es", "nl"]
   form_group_id: purpose
 
 # Character encoding (C)
@@ -2964,7 +3000,7 @@ dataset_fields:
   form_placeholder:
     en: e.g. Some useful version notes about the dataset.
     es: ej. Una descripción útil sobre las diferencias de esta versión del conjunto de datos.
-  form_languages: ["en", "es"]
+  form_languages: ["en", "es", "nl"]
   form_group_id: version_notes
 
 # Dataset validity (O)
