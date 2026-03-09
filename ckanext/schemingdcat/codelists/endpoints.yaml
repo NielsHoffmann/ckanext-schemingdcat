@@ -238,3 +238,18 @@ catalog_endpoints:
     profile_label_order: 4
     profile_info_url: https://docs.ckan.org/en/latest/api/index.html
     version: 3
+
+  - name: dcat_ap_nl_rdf
+    display_name: RDF DCAT-AP-NL
+    type: lod
+    format: rdf
+    image_display_url: /images/icons/endpoints/eu_dcat_ap.svg
+    endpoint_icon: /images/endpoints/catalog-rdf-eu.png
+    fa_icon: fa-share-alt
+    description: RDF DCAT-AP-NL 1.1 Endpoint for Dutch data portals.
+    profile: dcat_ap_nl,eu_dcat_ap_scheming
+    profile_id: dcat_ap_nl
+    profile_label: DCAT-AP-NL
+    profile_label_order: 1
+    profile_info_url: https://pldn.github.io/dcat-ap-nl/
+    version: 1.1.0
