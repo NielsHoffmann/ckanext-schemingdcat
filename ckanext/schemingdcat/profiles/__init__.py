@@ -28,6 +28,9 @@ __all__ = [
     'EuGeoDCATAP3Profile',
     
     # Spanish profiles
-    'EsNTIRISPProfile',
-    'EsDCATAP2Profile',
+    # 'EsNTIRISPProfile',
+    # 'EsDCATAP2Profile',
+
+    # Dutch profiles
+    'NLD_DCATAPProfile',
 ]
