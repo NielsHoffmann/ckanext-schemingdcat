@@ -34,6 +34,8 @@
             {{ render_metadata_label('GeoDCAT-AP', profile.profile_label, profile.profile_info_url, profile.profile_fa_icon) }}
         {% elif profile.profile_id == 'dcat_ap' and pkg.dcat_type not in inspire_metadata_values %}
             {{ render_metadata_label('DCAT-AP', profile.profile_label, profile.profile_info_url, profile.profile_fa_icon) }}
+        {% elif profile.profile_id == 'dcat_ap_nl' %}
+            {{ render_metadata_label('DCAT-AP-NL', profile.profile_label, profile.profile_info_url, profile.profile_fa_icon) }}
         {% elif profile.profile_id == 'nti_risp' and pkg.theme_es %}
             {{ render_metadata_label(profile.profile_label, profile.profile_label, profile.profile_info_url, profile.profile_fa_icon) }}
         {% endif %}

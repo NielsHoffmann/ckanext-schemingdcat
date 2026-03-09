@@ -1,33 +1,33 @@
 catalog_endpoints:
-  - name: es_dcat_ap_2_rdf
-    display_name: RDF-LD DCAT-AP-ES
-    type: lod
-    format: rdf
-    image_display_url: /images/icons/endpoints/es_dcat.svg
-    endpoint_icon: /images/endpoints/catalog-rdf-eu.png
-    fa_icon: fa-share-alt
-    description: RDF DCAT-AP-ES Endpoint for spanish data portals based on DCAT-AP 2.1.1
-    profile: es_dcat_ap_2,eu_dcat_ap_scheming
-    profile_id: dcat_ap_es
-    profile_label: DCAT-AP-ES
-    profile_label_order: 1
-    profile_info_url: https://datos.gob.es/es/doc-tags/dcat-ap
-    version: 1.0.0
+  # - name: es_dcat_ap_2_rdf
+  #   display_name: RDF-LD DCAT-AP-ES
+  #   type: lod
+  #   format: rdf
+  #   image_display_url: /images/icons/endpoints/es_dcat.svg
+  #   endpoint_icon: /images/endpoints/catalog-rdf-eu.png
+  #   fa_icon: fa-share-alt
+  #   description: RDF DCAT-AP-ES Endpoint for spanish data portals based on DCAT-AP 2.1.1
+  #   profile: es_dcat_ap_2,eu_dcat_ap_scheming
+  #   profile_id: dcat_ap_es
+  #   profile_label: DCAT-AP-ES
+  #   profile_label_order: 1
+  #   profile_info_url: https://datos.gob.es/es/doc-tags/dcat-ap
+  #   version: 1.0.0
 
-  - name: eu_dcat_ap_2_rdf
-    display_name: RDF DCAT-AP 2
-    type: lod
-    format: rdf
-    image_display_url: /images/icons/endpoints/eu_dcat_ap.svg
-    endpoint_icon: /images/endpoints/catalog-rdf-eu.png
-    fa_icon: fa-share-alt
-    description: RDF DCAT-AP 2.1.1 Endpoint for european data portals.
-    profile: eu_dcat_ap_2,eu_dcat_ap_scheming
-    profile_id: dcat_ap
-    profile_label: DCAT-AP 2
-    profile_label_order: 1
-    profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
-    version: 2.1.1
+  # - name: eu_dcat_ap_2_rdf
+  #   display_name: RDF DCAT-AP 2
+  #   type: lod
+  #   format: rdf
+  #   image_display_url: /images/icons/endpoints/eu_dcat_ap.svg
+  #   endpoint_icon: /images/endpoints/catalog-rdf-eu.png
+  #   fa_icon: fa-share-alt
+  #   description: RDF DCAT-AP 2.1.1 Endpoint for european data portals.
+  #   profile: eu_dcat_ap_2,eu_dcat_ap_scheming
+  #   profile_id: dcat_ap
+  #   profile_label: DCAT-AP 2
+  #   profile_label_order: 1
+  #   profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
+  #   version: 2.1.1
 
   - name: eu_dcat_ap_3_rdf
     display_name: RDF DCAT-AP 3
@@ -44,20 +44,20 @@ catalog_endpoints:
     profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
     version: 3.0.0
 
-  - name: eu_geodcat_ap_2_rdf
-    display_name: RDF GeoDCAT-AP 2
-    type: lod
-    format: rdf
-    image_display_url: /images/icons/endpoints/eu_geodcat_ap.svg
-    endpoint_icon: /images/endpoints/catalog-rdf-eu.png
-    fa_icon: fa-share-alt
-    description: RDF GeoDCAT-AP 2.0.0 Endpoint for european data portals.
-    profile: eu_geodcat_ap_2,eu_dcat_ap_scheming
-    profile_id: geodcat_ap
-    profile_label: GeoDCAT-AP 2
-    profile_label_order: 2
-    profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
-    version: 2.0.0
+  # - name: eu_geodcat_ap_2_rdf
+  #   display_name: RDF GeoDCAT-AP 2
+  #   type: lod
+  #   format: rdf
+  #   image_display_url: /images/icons/endpoints/eu_geodcat_ap.svg
+  #   endpoint_icon: /images/endpoints/catalog-rdf-eu.png
+  #   fa_icon: fa-share-alt
+  #   description: RDF GeoDCAT-AP 2.0.0 Endpoint for european data portals.
+  #   profile: eu_geodcat_ap_2,eu_dcat_ap_scheming
+  #   profile_id: geodcat_ap
+  #   profile_label: GeoDCAT-AP 2
+  #   profile_label_order: 2
+  #   profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
+  #   version: 2.0.0
 
   - name: eu_geodcat_ap_3_rdf
     display_name: RDF GeoDCAT-AP 3
@@ -74,35 +74,35 @@ catalog_endpoints:
     profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
     version: 3.0.0
 
-  - name: es_dcat_ap_2_jsonld
-    display_name: JSON-LD DCAT-AP-ES
-    type: lod
-    format: jsonld
-    image_display_url: /images/icons/endpoints/es_dcat.svg
-    endpoint_icon: /images/endpoints/catalog-jsonld-es.png
-    fa_icon: fa-share-alt
-    description: JSON-LD DCAT-AP-ES Endpoint for spanish data portals based on DCAT-AP 2.1.1
-    profile: es_dcat_ap_2,eu_dcat_ap_scheming
-    profile_id: dcat_ap_es
-    profile_label: DCAT-AP-ES
-    profile_label_order: 2
-    profile_info_url: https://datos.gob.es/es/doc-tags/dcat-ap
-    version: 1.0.0
+  # - name: es_dcat_ap_2_jsonld
+  #   display_name: JSON-LD DCAT-AP-ES
+  #   type: lod
+  #   format: jsonld
+  #   image_display_url: /images/icons/endpoints/es_dcat.svg
+  #   endpoint_icon: /images/endpoints/catalog-jsonld-es.png
+  #   fa_icon: fa-share-alt
+  #   description: JSON-LD DCAT-AP-ES Endpoint for spanish data portals based on DCAT-AP 2.1.1
+  #   profile: es_dcat_ap_2,eu_dcat_ap_scheming
+  #   profile_id: dcat_ap_es
+  #   profile_label: DCAT-AP-ES
+  #   profile_label_order: 2
+  #   profile_info_url: https://datos.gob.es/es/doc-tags/dcat-ap
+  #   version: 1.0.0
 
-  - name: eu_dcat_ap_2_jsonld
-    display_name: JSON-LD DCAT-AP 2
-    type: lod
-    format: jsonld
-    image_display_url: /images/icons/endpoints/eu_dcat_ap.svg
-    endpoint_icon: /images/endpoints/catalog-jsonld-eu.png
-    fa_icon: fa-share-alt
-    description: JSON-LD DCAT-AP 2.1.1 Endpoint for european data portals.
-    profile: eu_dcat_ap_2,eu_dcat_ap_scheming
-    profile_id: dcat_ap
-    profile_label: DCAT-AP 2
-    profile_label_order: 2
-    profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
-    version: 2.1.1
+  # - name: eu_dcat_ap_2_jsonld
+  #   display_name: JSON-LD DCAT-AP 2
+  #   type: lod
+  #   format: jsonld
+  #   image_display_url: /images/icons/endpoints/eu_dcat_ap.svg
+  #   endpoint_icon: /images/endpoints/catalog-jsonld-eu.png
+  #   fa_icon: fa-share-alt
+  #   description: JSON-LD DCAT-AP 2.1.1 Endpoint for european data portals.
+  #   profile: eu_dcat_ap_2,eu_dcat_ap_scheming
+  #   profile_id: dcat_ap
+  #   profile_label: DCAT-AP 2
+  #   profile_label_order: 2
+  #   profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
+  #   version: 2.1.1
 
   - name: eu_dcat_ap_3_jsonld
     display_name: JSON-LD DCAT-AP 3
@@ -119,20 +119,20 @@ catalog_endpoints:
     profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
     version: 3.0.0
 
-  - name: eu_geodcat_ap_2_jsonld
-    display_name: JSON-LD GeoDCAT-AP 2
-    type: lod
-    format: jsonld
-    image_display_url: /images/icons/endpoints/eu_geodcat_ap.svg
-    endpoint_icon: /images/endpoints/catalog-jsonld-eu.png
-    fa_icon: fa-share-alt
-    description: JSON-LD GeoDCAT-AP 2.0.0 Endpoint for european data portals.
-    profile: eu_geodcat_ap_2,eu_dcat_ap_scheming
-    profile_id: geodcat_ap
-    profile_label: GeoDCAT-AP 2
-    profile_label_order: 2
-    profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe
-    version: 2.0.0
+  # - name: eu_geodcat_ap_2_jsonld
+  #   display_name: JSON-LD GeoDCAT-AP 2
+  #   type: lod
+  #   format: jsonld
+  #   image_display_url: /images/icons/endpoints/eu_geodcat_ap.svg
+  #   endpoint_icon: /images/endpoints/catalog-jsonld-eu.png
+  #   fa_icon: fa-share-alt
+  #   description: JSON-LD GeoDCAT-AP 2.0.0 Endpoint for european data portals.
+  #   profile: eu_geodcat_ap_2,eu_dcat_ap_scheming
+  #   profile_id: geodcat_ap
+  #   profile_label: GeoDCAT-AP 2
+  #   profile_label_order: 2
+  #   profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe
+  #   version: 2.0.0
 
   - name: eu_geodcat_ap_3_jsonld
     display_name: JSON-LD GeoDCAT-AP 3
@@ -149,50 +149,50 @@ catalog_endpoints:
     profile_info_url: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe
     version: 3.0.0
 
-  - name: es_dcat_rdf
-    display_name: RDF NTI-RISP
-    type: lod
-    format: rdf
-    image_display_url: /images/icons/endpoints/es_dcat.svg
-    endpoint_icon: /images/endpoints/catalog-rdf-es.png
-    fa_icon: fa-share-alt
-    description: RDF NTI-RISP Endpoint for spanish data portals.
-    profile: es_dcat
-    profile_id: nti_risp
-    profile_label: NTI-RISP
-    profile_label_order: 3
-    profile_info_url: https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de
-    version: 1.0
+  # - name: es_dcat_rdf
+  #   display_name: RDF NTI-RISP
+  #   type: lod
+  #   format: rdf
+  #   image_display_url: /images/icons/endpoints/es_dcat.svg
+  #   endpoint_icon: /images/endpoints/catalog-rdf-es.png
+  #   fa_icon: fa-share-alt
+  #   description: RDF NTI-RISP Endpoint for spanish data portals.
+  #   profile: es_dcat
+  #   profile_id: nti_risp
+  #   profile_label: NTI-RISP
+  #   profile_label_order: 3
+  #   profile_info_url: https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de
+  #   version: 1.0
 
-  - name: es_dcat_jsonld
-    display_name: JSON-LD NTI-RISP
-    type: lod
-    format: jsonld
-    image_display_url: /images/icons/endpoints/es_dcat.svg
-    endpoint_icon: /images/endpoints/catalog-jsonld-es.png
-    fa_icon: fa-share-alt
-    description: JSON-LD NTI-RISP Endpoint for spanish data portals.
-    profile: es_dcat
-    profile_id: nti_risp
-    profile_label: NTI-RISP
-    profile_label_order: 3
-    profile_info_url: https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de
-    version: 1.0
+  # - name: es_dcat_jsonld
+  #   display_name: JSON-LD NTI-RISP
+  #   type: lod
+  #   format: jsonld
+  #   image_display_url: /images/icons/endpoints/es_dcat.svg
+  #   endpoint_icon: /images/endpoints/catalog-jsonld-es.png
+  #   fa_icon: fa-share-alt
+  #   description: JSON-LD NTI-RISP Endpoint for spanish data portals.
+  #   profile: es_dcat
+  #   profile_id: nti_risp
+  #   profile_label: NTI-RISP
+  #   profile_label_order: 3
+  #   profile_info_url: https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de
+  #   version: 1.0
 
-  - name: csw_inspire
-    display_name: CSW INSPIRE 2.0.2
-    type: ogc
-    format: xml
-    image_display_url: /images/icons/endpoints/csw_inspire.svg
-    endpoint_icon: /images/endpoints/catalog-csw-eu.png
-    fa_icon: fa-globe
-    description: OGC-INSPIRE Endpoint for spatial metadata.
-    profile: csw
-    profile_id: inspire
-    profile_label: INSPIRE
-    profile_label_order: 0
-    profile_info_url: https://inspire.ec.europa.eu/metadata/6541
-    version: 2.0.2
+  # - name: csw_inspire
+  #   display_name: CSW INSPIRE 2.0.2
+  #   type: ogc
+  #   format: xml
+  #   image_display_url: /images/icons/endpoints/csw_inspire.svg
+  #   endpoint_icon: /images/endpoints/catalog-csw-eu.png
+  #   fa_icon: fa-globe
+  #   description: OGC-INSPIRE Endpoint for spatial metadata.
+  #   profile: csw
+  #   profile_id: inspire
+  #   profile_label: INSPIRE
+  #   profile_label_order: 0
+  #   profile_info_url: https://inspire.ec.europa.eu/metadata/6541
+  #   version: 2.0.2
 
   - name: csw_inspire
     display_name: CSW INSPIRE-3.0.0
@@ -246,10 +246,10 @@ catalog_endpoints:
     image_display_url: /images/icons/endpoints/eu_dcat_ap.svg
     endpoint_icon: /images/endpoints/catalog-rdf-eu.png
     fa_icon: fa-share-alt
-    description: RDF DCAT-AP-NL 1.1 Endpoint for Dutch data portals.
+    description: RDF DCAT-AP-NL 3.0 Endpoint for Dutch data portals.
     profile: dcat_ap_nl,eu_dcat_ap_scheming
     profile_id: dcat_ap_nl
     profile_label: DCAT-AP-NL
     profile_label_order: 1
-    profile_info_url: https://pldn.github.io/dcat-ap-nl/
-    version: 1.1.0
+    profile_info_url: https://geonovum.github.io/DCAT-AP-NL30/
+    version: 3.0.0

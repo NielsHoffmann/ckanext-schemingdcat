@@ -972,7 +972,7 @@ class BaseEuDCATAPProfile(SchemingDCATRDFProfile):
 
                 g.add((distribution, SPDX.checksum, checksum))
 
-    def _graph_from_catalog_base(self, catalog_dict, catalog_ref):
+    def _graph_from_catalog_base(self, catalog_dict, catalog_ref, **kwargs):
 
         g = self.g
 
@@ -981,12 +981,17 @@ class BaseEuDCATAPProfile(SchemingDCATRDFProfile):
 
         g.add((catalog_ref, RDF.type, DCAT.Catalog))
 
+        # Determine defaults
+        defaults = eu_dcat_ap_default_values.copy()
+        if 'default_values' in kwargs:
+            defaults.update(kwargs['default_values'])
+
         # Basic fields
         license, access_rights, spatial_uri, language = [
             self._get_catalog_field(field_name='license_url'),
-            eu_dcat_ap_default_values['access_rights'],
+            defaults['access_rights'],
             self._get_catalog_field(field_name='spatial_uri'),
-            self._search_value_codelist(MD_EU_LANGUAGES, config.get('ckan.locale_default'), "label","id") or eu_dcat_ap_default_values['language'],
+            self._search_value_codelist(MD_EU_LANGUAGES, config.get('ckan.locale_default'), "label","id") or defaults['language'],
             ]
 
         # Mandatory elements by NTI-RISP/DCAT-AP-ES (datos.gob.es)
@@ -994,12 +999,12 @@ class BaseEuDCATAPProfile(SchemingDCATRDFProfile):
             ("encoding", CNT.characterEncoding, "UTF-8", Literal),
             ("language", DCT.language, language, URIRefOrLiteral),
             ("spatial_uri", DCT.spatial, spatial_uri, URIRefOrLiteral),
-            ("theme_taxonomy", DCAT.themeTaxonomy, eu_dcat_ap_default_values["theme_taxonomy"], URIRef),
-            ("theme_es_taxonomy", DCAT.themeTaxonomy, eu_dcat_ap_default_values["theme_es_taxonomy"], URIRef),
-            ("theme_eu_taxonomy", DCAT.themeTaxonomy, eu_dcat_ap_default_values["theme_eu_taxonomy"], URIRef),
+            ("theme_taxonomy", DCAT.themeTaxonomy, defaults["theme_taxonomy"], URIRef),
+            ("theme_es_taxonomy", DCAT.themeTaxonomy, defaults["theme_es_taxonomy"], URIRef),
+            ("theme_eu_taxonomy", DCAT.themeTaxonomy, defaults["theme_eu_taxonomy"], URIRef),
             ("homepage", FOAF.homepage, config.get("ckan.site_url"), URIRef),
             ("license", DCT.license, license, URIRef),
-            ("conforms_to", DCT.conformsTo, eu_dcat_ap_default_values["conformance"], URIRef),
+            ("conforms_to", DCT.conformsTo, defaults["conformance"], URIRef),
             ("access_rights", DCT.rights, f'{catalog_uri()}/rights', URIRefOrLiteral),
             # Unnecesary properties for dcat:Catalog. DCAT-AP deprecated
             #("identifier", DCT.identifier, catalog_uri(), URIRef),
@@ -1028,8 +1033,8 @@ class BaseEuDCATAPProfile(SchemingDCATRDFProfile):
             log.error(f'Error adding catalog {field}: {str(e)}')
 
         # Dates
-        modified = self._get_catalog_field(field_name='metadata_modified', default_values_dict=eu_dcat_ap_default_values, fallback='modified')
-        issued = self._get_catalog_field(field_name='metadata_created', default_values_dict=eu_dcat_ap_default_values, fallback='issued', order='asc')
+        modified = self._get_catalog_field(field_name='metadata_modified', default_values_dict=defaults, fallback='modified')
+        issued = self._get_catalog_field(field_name='metadata_created', default_values_dict=defaults, fallback='issued', order='asc')
         if modified or issued or license:
             if modified:
                 self._add_date_triple(catalog_ref, DCT.modified, self._ensure_datetime(modified))
@@ -1077,15 +1082,15 @@ class BaseEuDCATAPProfile(SchemingDCATRDFProfile):
             g.add((rights_uri, RDF.type, ODRS.RightsStatement))
             
             # Add multilingual labels
-            g.add((rights_uri, RDFS.label, Literal(eu_dcat_ap_default_values['rights_uri_label'], lang='en')))
+            g.add((rights_uri, RDFS.label, Literal(defaults['rights_uri_label'], lang='en')))
             g.add((rights_uri, RDFS.label, Literal(es_dcat_ap_default_values['rights_uri_label'], lang='es')))
             
             # Add multilingual attribution text
-            g.add((rights_uri, ODRS.attributionText, Literal(eu_dcat_ap_default_values['rights_attribution_text'], lang='en')))
+            g.add((rights_uri, ODRS.attributionText, Literal(defaults['rights_attribution_text'], lang='en')))
             g.add((rights_uri, ODRS.attributionText, Literal(es_dcat_ap_default_values['rights_attribution_text'], lang='es')))
             
             # Add non-language specific properties
-            g.add((rights_uri, ODRS.dataLicense, URIRef(eu_dcat_ap_default_values["license_url"])))
+            g.add((rights_uri, ODRS.dataLicense, URIRef(defaults["license_url"])))
             g.add((rights_uri, ODRS.attributionURL, URIRef(publisher_ref)))
 
     def _assign_theme_tags(self, dataset_dict, key, values):
